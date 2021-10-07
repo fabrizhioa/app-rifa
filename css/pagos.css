@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+* {
+    box-sizing: content-box;
+    font-family: 'Open Sans';
+    outline: 0;
+    margin: 0;
+    padding: 0;
+}
+main {
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+}
+#vistaPagos {
+    margin: 0 auto;
+    width: 300px;
+}
+
+.list-group {
+    display: inline-grid;
+    grid-template-columns: 30px 190px 80px;
+    font-size: 12px;
+    padding: 2px;
+    border: 1px solid #999;
+    margin: 2px;
+    border-radius: 2px;
+}
+
+.list-group > div {
+    align-self: center;
+    text-align: center;
+}
+
+.list-group .data-list-group {
+    text-align: left;
+}
+
+.btn {
+    padding: 2px;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: skyblue;
+    color: white;
+    height: 30px;
+    width: 60px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn:active {
+    background: darkcyan;
+}
+
+.btnRojo {
+    background-color: red;
+}
+
+.btnRojo:active {
+    background: darkred;
+}

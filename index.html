@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/app.css">
+  <title>Super Rifa</title>
+</head>
+
+<body>
+  <main id="MainBox">
+    <section id="infoBox" class="card" style="width: auto;">
+      <div>
+        <h1>[INGRESA UN TITULO]</h1>
+        <p>[INGRESA UNA DESCRIPCION]<br/><small>[NOMBRE DEL RESPONSABLE]</small></p>
+      </div>
+     
+      <div class="card-body">
+        <img src="img/img1.jpg" class="card-img-top">
+        <h2 class="card-title">Primer Premio</h2>
+        <p class="card-text">[DESCRIPCION PRIMER PREMIO]</p>
+      </div>
+      <div class="card-body">
+        <img src="img/img2.jpg" class="card-img-top">
+        <h2 class="card-title">Segundo Premio</h2>
+        <p class="card-text">[DESCRIPCION SEGUNDO PREMIO]</p>
+      </div>
+      <div class="card-body">
+        <img src="img/img3.jpg" class="card-img-top">
+        <h2 class="card-title">Tercer Premio</h2>
+        <p class="card-text">[DESCRIPCION TERCER PREMIO]</p>
+      </div>
+      <div class="buttonContainer">
+        <button type="button" class="btn" onclick="viewForm()">Adquirir un numero</button>
+      </div>
+    </section>
+    <section id="numberBox" style="width: auto;">
+      <h2>Numeros Disponibles</h2>
+      <div id="numberContentBox"></div>
+    </section>
+    <section id="formBox">
+      <div class="titleContainer">
+        <h2>Formulario</h2>
+      </div>
+      <div>
+        <button class="btn btnFloat" onclick="viewInfo()">◄</button>
+      </div>
+      <form action="">
+        <div class="form-group">
+          <label for="inputName">Nombre y apellido</label>
+          <input type="text" class="form-control" id="inputName" placeholder="Ej: Maria Rosales">
+        </div>
+        <div class="form-group">
+          <label for="inputName">Telefono</label>
+          <input type="text" class="form-control" id="inputPhone" placeholder="Ej: +1 (997) 0024">
+        </div>
+        <div class="form-group">
+          <label for="inputName">Dirección</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Ej: Calle carabobo 3050 carora venezuela">
+        </div>
+        <div class="form-group">
+          <label for="selectNum">Elige un numero disponible</label>
+          <select class="form-control" id="selectNum" onchange="selectNumber(1)">
+            <option value="">Seleccionar..</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <h4>Datos de pago</h4>
+        </div>
+        <div class="form-group">
+          <label>Referencia:</label>
+          <input type="text" class="form-control" id="inputReferenceId">
+        </div>
+        <div class="form-group">
+          <label>Titular de la cuenta:</label>
+          <input type="text" class="form-control" id="inputReferenceName">
+        </div>
+        <div class="form-group">
+          <small>[MODO DE PAGO]</small>
+          <small>[COSTO]</small>
+        </div>
+        <div class="form-group">
+          <button class="btn" type="button" onclick="submitNum()">Adquirir Numero</button>
+        </div>
+      </form>
+    </section>
+    <div class="card-float" id="responseCard">
+      <div class="card-float-body">
+        <div class="card-float-body-content">
+          <h1 id="titleCardFloat" style="text-transform: uppercase;">Numero guardado correctamente</h1>
+          <p id="textCardFloat">Seras contactado por mi para confirmar el pago</p>
+          <button class="btn" onclick="location.reload()">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
